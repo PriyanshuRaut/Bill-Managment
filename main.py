@@ -90,6 +90,11 @@ class App():
         self.lbl_total = Label(self.f3,font=("aria",20,'bold'),text="Total",width=16,fg="lightyellow",bg="black")
         self.lbl_total.place(x = 10,y = 50)
 
+        self.entry_total = Entry(self.f3,font=("aria",20,'bold'),textvariable=self.TotalBill,bd=6,width=15,bg="lightblue",state='readonly')
+        self.entry_total.place(x = 20,y = 100)
+        total = c1 + c2 + c3 + c4 + c5
+        self.TotalBill.set("Rs. " + str("%.2f"%total))
+
 
     def Reset(self):
         self.paneer.set("")
